@@ -13,7 +13,6 @@ body{
 
 .main-contacto{
     height: 100%;
-    box-sizing: border-box;
 }
 
 .modo-oscuro {
@@ -141,9 +140,14 @@ a.foot {
 }
 
 form{
+    height: 100%;
     width: 50%;
     text-align: center;
     background-color: #0cc0df;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .input-label{
@@ -186,14 +190,19 @@ form{
 }
 
 .div-contact{
+    justify-content: center;
+    height: 100%;
     font-family: 'Josefin Sans';
     color: white;
     border-radius: 50px;
     width: 50%;
-    text-align: center;
-    background-image: url('../fotos/fondoprueba.png');
-	background-size: cover;
-	background-position: center;
+    display: flex;
+}
+
+.div-contact img{
+    border-radius: 50px;
+    margin: auto auto;
+    height: 100%;
 }
 
 .t-d-contact{
@@ -202,6 +211,24 @@ form{
 
 .p-d-contact{
     visibility: hidden;
+}
+
+legend{
+    font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+    .div-contact{
+        display: none;
+    }
+
+    .div-contact img{
+        display: none;
+    }
+
+    form{
+        width: 80%;
+    }
 }
 
 @media (max-width: 900px) {
@@ -250,7 +277,11 @@ form{
 }
   }
 
-  
+@media (max-width: 520px) {
+    .enviar{
+        width: 70%;
+    }
+}  
 
 .derecha {
     justify-content: flex-end;
