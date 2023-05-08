@@ -43,17 +43,61 @@
         <div> <button class="btn btn-outline-secondary" id="modo-oscuro" onclick="toggleDarkMode()">🌒</button> </div>
       </nav>
  
-    <form id="contacto" action="" method="get" class="m-5">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" placeholder="Ingrese su nombre" required>
-        <label for="e-mail">E-mail</label>
-        <input type="email" name="email" placeholder="Ingrese su e-mail" required>
-        <label for="celular">Celular</label>
-        <input type="text" name="celular" placeholder="Ingrese su celular" required>
-        <label for="comentario">Comentario</label>
-        <input type="text" name="comentario" placeholder="Comentario opcional">
-        <input type="submit" value="Enviar">
+      <form>
+        <label for="nombreapellido" class="input-label">Nombre y Apellido</label>
+        <input type="text" id="nombreapellido" class="input-padron" required>
+
+        <label for="correoelectronico" class="input-label">Correo Electrónico</label>
+        <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+
+        <label for="telefono" class="input-label">Teléfono</label>
+        <input type="tel" id="telefono" class="input-padron" required placeholder="11 5555 5555">
+
+        <label for="mensaje" class="input-label">Mensaje</label>
+        <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+        
+        <fieldset>
+            <legend>¿Cómo le gustaría que lo contactemos?</legend>
+
+            <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label>
+            
+            <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Teléfono</label>
+            
+            <label for="radio-whatsapp"><input type="radio" name="contacto" value="whatsapp" id="radio-whatsapp" checked>WhatsApp</label>
+            
+        </fieldset>
+   
+        <input type="submit" value="Enviar formulario" class="enviar">
     </form>
+
+    <a href="index.html" class="icon"><img src="fotos/casa.png" alt="casa"></a>
+
+    <footer class="centrado">
+      <div class="container text-center">
+        <div class="row" style="text-align: center; align-items: center;">
+          <div class="foot col">
+            <a href="https://www.facebook.com/profile.php?id=100057131663487" target="_blank">
+              <img class="fotofoot" src="fotos/Diseño sin título.png" alt="">
+            </a>
+          </div>
+          <div class='col-6'>
+            <p>
+              Soler 394 - Ituzaingó
+            </p>
+            <p>
+              11 5015 1399
+            </p>
+          </div>
+          <div class="col">
+            <a class='foot' href="#nosotros">ME Baños & Cocinas</a>
+            <a class='foot' href="productos.html">Productos</a>
+            <a class='foot' href="trabajos.html">Trabajos</a>
+            <a class='foot' href="contacto.html">Contacto</a>
+          </div>
+        </div> 
+      </div>    
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="js/bañosycocinas.js"></script>
 </body>
