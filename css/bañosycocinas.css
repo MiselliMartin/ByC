@@ -2,7 +2,19 @@ html, body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    height: 100%;
   }
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-contacto{
+    height: 100%;
+    box-sizing: border-box;
+}
 
 .modo-oscuro {
     background: linear-gradient(#555555, black);
@@ -112,7 +124,7 @@ a.foot {
 .icon {
     position: fixed;
     bottom: 5px;
-    right: 10px;
+    right: 15px;
 }
   
 .icon img {
@@ -120,13 +132,38 @@ a.foot {
     height: 40px;
 }
 
+.main-contacto{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #0cc0df;
+    padding: 10px 5px;
+}
+
+form{
+    width: 50%;
+    text-align: center;
+    background-color: #0cc0df;
+}
+
 .input-label{
+    font-weight: bold;
     margin: 0 10px;
+    text-align: center;
+    width: 80%;
 }
 
 .input-padron {
     display: block;
-    margin: 10px 10px;
+    margin: 10px auto;
+    text-align: center;
+    width: 80%;
+    border-radius: 20px;
+}
+
+.label-op{
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .enviar{
@@ -136,8 +173,8 @@ a.foot {
     font-weight: bold;
     color:white;
     background: #0cc0df;
-    border:none;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: 2px solid #0c6fdf;
     transition: 1s all;
     cursor:pointer;
     margin: 10px 10px;
@@ -146,6 +183,60 @@ a.foot {
 .enviar:hover{
     background: #0c6fdf;
     transform: scale(1.2);
+}
+
+.div-contact{
+    font-family: 'Josefin Sans';
+    color: white;
+    border-radius: 50px;
+    width: 50%;
+    text-align: center;
+    background-image: url('../fotos/fondoprueba.png');
+	background-size: cover;
+	background-position: center;
+}
+
+.t-d-contact{
+    visibility: hidden;
+}
+
+.p-d-contact{
+    visibility: hidden;
+}
+
+@media (max-width: 900px) {
+
+    body{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .main-contacto{
+        height: 100%;
+        flex-direction: column;
+        width: 100%;
+        align-content: center;
+        justify-content: space-around;
+    }
+
+    form{
+        width: 80%;
+    }
+
+    .div-contact{
+        width: 80%;
+    }
+
+    .t-d-contact{
+        font-weight: bold;
+        font-size: 60px;
+        visibility: visible;
+    }
+
+    .p-d-contact{
+        font-weight: bold;
+        visibility: visible;
+    }
 }
   
 @media (max-width: 768px) {
