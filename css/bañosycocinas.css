@@ -119,6 +119,34 @@ a.foot {
     width: 40px;
     height: 40px;
 }
+
+.input-label{
+    margin: 0 10px;
+}
+
+.input-padron {
+    display: block;
+    margin: 10px 10px;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color:white;
+    background: #0cc0df;
+    border:none;
+    border-radius: 5px;
+    transition: 1s all;
+    cursor:pointer;
+    margin: 10px 10px;
+}
+
+.enviar:hover{
+    background: #0c6fdf;
+    transform: scale(1.2);
+}
   
 @media (max-width: 768px) {
     
